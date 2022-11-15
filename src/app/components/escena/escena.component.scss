@@ -5,6 +5,12 @@ ul{
         border: 2px solid black;
         border-radius: 20px;
         margin-top: 10px;
-        text-align: center;
     }
+}
+
+.current{
+    background-color: #FFC0CB;
+}
+.notcurrent{
+    background-color: rgba($color: white, $alpha: .8);
 }

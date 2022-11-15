@@ -1,1 +1,27 @@
- <app-escena></app-escena>
+<div *ngIf="firstTime==true; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+    <div class="container align-content-center justify-content-center text-center">
+        <p class="my-5">Ésta es la primera entrega de Angular. Con la asimilación de los conceptos básicos de
+            JavaScript, verás que con la ayuda de Angular, podrás ejecutar de forma más práctica las aplicaciones más
+            potentes, en comparación con JavaScript plano (vanilla JavaScript).
+
+            Tómate con calma esta entrega, los primeros pasos de Angular son más complicados de entender. Sin embargo,
+            es primordial saber con qué modalidad se construyen las aplicaciones de este tipo de programación.
+
+            No olvides que si utilizamos Angular, la web se divide en pequeños trozos o componentes, que son
+            reutilizables. Estas partes pueden ser grandes o pequeñas, pero, por lo general, están bien definidas:
+            tienen un propósito único y obvio.
+
+            En esta entrega pondremos en práctica los conceptos básicos que has aprendido de Angular a partir del
+            siguiente caso práctico: u n/a cliente/a tiene una web de gestión empresarial desarrollada con Angular (como
+            producto principal) y nos ha pedido que desarrollemos un tutorial, en el que, mediante dos botones, los
+            nuevos usuarios/as pueden avanzar o retroceder en los consejos, modificándose el texto de ayuda y la imagen
+            de fondo.</p>
+        <button class="btn btn-dark" (click)="changeFirst()">Empezar</button>
+    </div>
+</ng-template>
+<ng-template #elseBlock>
+    <div id="body" class="bodyback">
+        <app-escena [titols]=titles></app-escena>
+    </div>
+</ng-template>

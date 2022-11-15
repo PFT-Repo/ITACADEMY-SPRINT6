@@ -1,5 +1,14 @@
-<ul class="titles">
-  <li *ngFor="let p of Data">
-    <p class="badge">{{p.title}}</p>
-  </li>
-</ul>
+<div class="container-fluid">
+  
+  <ul class="titles">
+    <div class="row py-3 mx-1">
+    <button class="col p-3" (click)="prev()">Prev</button>
+    <button class="col p-3" (click)="next()">Next</button>
+  </div>
+    <li *ngFor="let p of titols let o = index"  [ngClass]="o==i?'current': 'notcurrent'">
+      <p class="text-center">{{p.title}}</p>
+    </li>
+  </ul>
+</div>
+
+<script src="./escena.component.ts"></script>
